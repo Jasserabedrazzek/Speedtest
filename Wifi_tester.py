@@ -38,7 +38,6 @@ def Wifi():
             ping = sp.results.ping # in ms
             st.info(f"Ping: {str(ping)[0:5]} ms")
         
-a = Wifi()
 st.write(" ")
 st.write("---") 
 st.write(" ")   
