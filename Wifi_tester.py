@@ -36,7 +36,7 @@ if btn:
         with st.spinner('Wait for it...'):
             time.sleep(2)
         ping = sp.results.ping # in ms
-        st.info(f"Ping Latency: {ping_latency:.2f} ms")
+        st.info(f"Ping Latency: {ping:.2f} ms")
         
 st.write(" ")
 st.write("---") 
