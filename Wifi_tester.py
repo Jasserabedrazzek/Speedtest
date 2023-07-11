@@ -25,18 +25,18 @@ if btn:
         
         with st.spinner('Wait for it...'):
             time.sleep(1)
-        download_speed = sp.download() / 1_000_000 # in Mbps
-        st.info(f"Download Speed: {str(download_speed)[0:5]} Mbps")
+        download_speed = sp.download() / 10**6 # in Mbps
+        st.info(f"Download Speed: {download_speed:.2f} Mbps")
     with col4:
         with st.spinner('Wait for it...'):
             time.sleep(2)
-        upload_speed = sp.upload() / 1_000_000 # in Mbps
-        st.info(f"Upload Speed: {str(upload_speed)[0:5]} Mbps")
+        upload_speed = sp.upload() / 10**6 # in Mbps
+        st.info(f"Upload Speed: {upload_speed:.2f} Mbps")
     with col5:
         with st.spinner('Wait for it...'):
             time.sleep(2)
         ping = sp.results.ping # in ms
-        st.info(f"Ping: {str(ping)[0:5]} ms")
+        st.info(f"Ping Latency: {ping_latency:.2f} ms")
         
 st.write(" ")
 st.write("---") 
